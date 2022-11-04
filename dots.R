@@ -8,7 +8,7 @@ x$color <- sample(letters[1:4], size = nrow(x), replace = T)
 
 ggplot(x, aes(x, y, size = vals, color = color)) +
   geom_point() +
-  viridis::scale_color_viridis(discrete = T, option = "I") +
+  MetBrewer::scale_color_met_d("Egypt") +
   theme_void() +
   theme(legend.position = "none",
         plot.background = element_rect(fill = "black"))
